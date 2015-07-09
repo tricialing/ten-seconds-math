@@ -1,0 +1,35 @@
+body{
+  /*background-color: #333330;*/
+  background-color: #bfbfbb;
+  /*color: #bfbfbb;*/
+  color: #333330;
+}
+
+#answer{
+  background-color: #bfbfbb;
+  border: 0px;
+  border-bottom: 5px solid #333330;
+}
+
+.navbar-fixed-bottom{
+  padding: 20px;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.option-box{
+  margin: 0 20px 0 20px;
+}
+
+#btc{
+  position: absolute;
+  width: 10%;
+  float: left;
+  display: none;
+}

@@ -5,16 +5,55 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Math Game">
+    <meta name="author" content="Harry Chen">
 
+    <!-- Jquery Library -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/application.js"></script>
 
+    <!-- Jquery UI Library -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap Library -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-  </head>
-  <body>
 
+    <!-- Custom Javascript -->
+    <script src="js/application.js"></script>
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    
+  </head>
+  <body class="vertical-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h1><span id="clock" style="font-size:60px;">10</span> seconds left</h1>
+
+          <div style="font-size: 100px;"><span id="question"></span> </div>
+          <h1><input id="answer" placeholder="answer" class="text-center col-xs-4 col-xs-offset-4"></h1>
+        
+        </div>
+
+        <div class="col-xs-8 col-xs-offset-2 navbar-fixed-bottom">
+          <div class="col-xs-6 col-xs-offset-5">
+            <div>Options</div>
+            <div>
+              <input type="checkbox" class="option-box" id="addition" checked="true">+
+              <input type="checkbox" class="option-box" id="subtraction">-
+              <input type="checkbox" class="option-box" id="multiplication">x
+              <input type="checkbox" class="option-box" id="division">/
+              <input type="checkbox" class="option-box" id="square">²
+              <input type="checkbox" class="option-box" id="sqrt">√
+            </div>
+          </div>
+        </div>
+
+        <div id="btc">
+          <img src="https://en.bitcoin.it/w/images/en/5/50/Bitcoin.png" class="img-responsive">
+        </div>
+
+      </div>
+    </div>
   </body>
 </html>

@@ -72,22 +72,19 @@ $(document).ready(function(){
       case 'addition':
         formula = function additionQuestion(a, b) {
           var question = generateQuestionText(a, b, ' + ');
-          return {'information': question,
-                  'eval': question};
+          return {'information': question, 'eval': question};
         };
         break;
       case 'subtraction':
         formula = function subtractionQuestion(a, b) {
           var question = generateQuestionText(a, b, ' - ');
-          return {'information': question,
-                  'eval': question};
+          return {'information': question, 'eval': question};
         };
         break;
       case 'multiplication':
         formula = function multiplicationQuestion(a, b) {
           var question = generateQuestionText(a, b, ' x ');
-          return {'information': question,
-                  'eval': question.replace('x','*')};
+          return {'information': question, 'eval': question.replace('x','*')};
         };
         break;
       case 'division':
@@ -97,16 +94,14 @@ $(document).ready(function(){
 
           var multiple = dividend * denominator;
 
-          return {'information': multiple + ' / ' + denominator,
-                  'eval': multiple + '/' + denominator};
+          return {'information': multiple + ' / ' + denominator, 'eval': multiple + '/' + denominator};
         };
         break;
       case 'square':
         formula = function squareQuestion(a, b){
           var x = rand(Math.sqrt(a), Math.sqrt(b));
 
-          return {'information': x + '²',
-                  'eval': Math.pow(x,2)};
+          return {'information': x + '²', 'eval': Math.pow(x,2)};
         };
         break;
       case 'sqrt':
@@ -114,13 +109,11 @@ $(document).ready(function(){
           var x = rand(Math.sqrt(a), Math.sqrt(b));
           var y = x*x;
 
-          return {'information': '√' + y,
-                  'eval': x};
+          return {'information': '√' + y, 'eval': x};
         };
         break;
     }
 
-    // TODO: random selection
     return formula(1,NUMBER_LIMIT)
   };
 

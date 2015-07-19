@@ -22,17 +22,21 @@
   <body>
     <div class="container">
       <section class="col-xs-10 col-md-offset-1 text-center">
-        <h1 class="row"></span>#tenSecondsMathTest</h1>
+        <h1 class="row">#tenSecondsMathTest</h1>
         <h2 class="row"><span id="timer"></span> seconds left</h2>
         <div class="row panel panel-default">
           <div class="panel-heading">
-            <h2 class="primary-text-color" id="question">3+2</h2>
+            <h2 class="primary-text-color" id="question"></h2>
           </div>
           <div class="panel-body">
             <input class="text-center" id="answer" placeholder="Answer"></input>
           </div>
         </div>
-      </section>
+        <div class="row">
+          <input type="range" id="number-picker" value="10" min="10" max="100">
+          <output for="number-picker" id="number"></output>
+        </div>
+     </section>
   </div>
 
 

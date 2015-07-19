@@ -2,7 +2,7 @@
 
 var timer;
 var currentQuestion; 
-var secondLeft = 5;
+var secondLeft = 2;
 var totalScore = 0;
 
 $(document).ready(function(){
@@ -25,7 +25,9 @@ $(document).ready(function(){
 
 			if (secondLeft <= 0){
 				clearInterval(timer);
-				$('#answer').parent().text("Gameover" + "n/ Total Score: " + totalScore);
+				$('.panel-heading').addClass( "accent-color" );
+				$('#question').parent().html('<h2>Gameover</h2>');
+				$('#answer').parent().html('<h2>Total Score: </h2>' + '<h2>' + totalScore + '</h2>');
 				console.log(totalScore);
 			};	
 
@@ -71,15 +73,6 @@ $(document).ready(function(){
 
 		}
 	});
-
-
-
-	// var timer = setInterval(function(){
-	// addSecond();
-
-	// });
-
-	// 		clearInterval(timer);
 
 
 });

@@ -1,3 +1,72 @@
-h1 {
-	background-color: red;
+.dark-primary-color    { background: #0097A7; }
+.default-primary-color { background: #00BCD4; }
+.light-primary-color   { background: #B2EBF2; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FF5722; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+
+body {
+	background-color: #00BCD4;
 }
+
+h1 {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-style: italic;
+	font-size: 5vw;
+	padding-top: 1vw;
+}
+
+.panel {
+	width: 40%;
+	margin: 4em auto 2em auto;
+/*	padding: 1.5em;*/
+	color: white;
+	background-color: rgba(255,255,255,0.5);
+	border: 0px;
+}
+
+.gameover {
+	color: #FF5722;
+}
+
+#answer {
+	border: 0px;
+	background-color: none;
+	padding: 1.3vw;
+}
+
+input {
+	background: none;
+    -webkit-box-shadow: none;
+	outline: -webkit-focus-ring-color auto 0px;
+	font-size: 1.7vw;
+	padding: 0;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color:    rgba(255,255,255,0.3);
+    font-size: 1.3vw;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color:    rgba(255,255,255,0.3);
+    font-size: 1.3vw;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color:    rgba(255,255,255,0.3);
+    font-size: 1.3vw;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color:    rgba(255,255,255,0.3);
+    font-size: 1.3vw;
+}
+
+
+
+/*#question {
+	padding: 1em;
+	font-size: 3em;
+}*/

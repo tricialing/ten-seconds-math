@@ -2,17 +2,16 @@
 
 var timer;
 var currentQuestion; 
-var secondLeft = 2;
+var secondLeft = 10;
 var totalScore = 0;
+var numberValue;
 
 
 $(document).ready(function(){
   console.log("linked");
 
-  $('#number-picker').on('input', function (){
-    var num = $('#number-picker').val();
-    $('#number').val("Number Value: " + num);
-  });
+  $("#number-picker").val(); // returns 5.3
+  console.log('#number-picker');
 
   $('#timer').text(secondLeft);
 
@@ -39,18 +38,20 @@ $(document).ready(function(){
           location.reload(true);
           console.log('playagain');
         });
+        $('.clock').hide();
       };  
 
+      if (secondLeft <= 2){
+        $('#timer').addClass( "gameover" );
+      };
     },1000);
   };
 
   //generate random number 
-  var randomNum = function(){
-    return Math.floor(Math.random() * 10);
+  var randomNum = function(num){
+    return Math.floor(Math.random() * num);
     console.log(randomNum);
   };
-
-  //get number from slider
 
   // set form of addition question
   var additionQuestion = function(a,b){
@@ -58,12 +59,22 @@ $(document).ready(function(){
   };
 
   // generate new question
-  var newQuestion = function(){
-    currentQuestion = additionQuestion (randomNum(),randomNum());
+  var newQuestion = function(num){
+    currentQuestion = additionQuestion (randomNum(num),randomNum(num));
     $('#question').text(currentQuestion);
   };
 
-  newQuestion();
+  // newQuestion();
+
+  var num = $('#number-picker').val();
+  $('#number').val('Number Value: ' + num);
+  newQuestion(num);
+    
+  $('#number-picker').on('input', function (){
+    var num = $('#number-picker').val();
+    $('#number').val('Number Value: ' + num);
+    newQuestion(num);
+  });
 
 
   $('#answer').keyup(function(){
@@ -79,7 +90,7 @@ $(document).ready(function(){
       addSecond(); //add sec to time
       totalScore++; //add score
       $('#answer').val(''); //clear input box
-      newQuestion(); // generate new question
+      newQuestion(num); // generate new question
 
     }
   });
